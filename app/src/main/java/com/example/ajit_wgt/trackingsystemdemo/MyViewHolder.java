@@ -6,16 +6,19 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
     //ImageView img_status;
     TextView tv_user_email;
+    RelativeLayout main_layout;
     RecyclerItemClick recyclerItemClick;
     public MyViewHolder(View itemView) {
         super(itemView);
         tv_user_email=itemView.findViewById(R.id.tv_user_email);
+        main_layout=itemView.findViewById(R.id.main_layout);
        // img_status=itemView.findViewById(R.id.img_status);
 
     }

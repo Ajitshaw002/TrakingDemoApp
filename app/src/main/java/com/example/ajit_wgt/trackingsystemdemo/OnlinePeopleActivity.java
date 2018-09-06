@@ -161,9 +161,14 @@ public class OnlinePeopleActivity extends AppCompatActivity implements GoogleApi
         adapter = new FirebaseRecyclerAdapter<User, MyViewHolder>(personsOptions) {
             @Override
             protected void onBindViewHolder(@NonNull MyViewHolder holder, final int position, @NonNull final User model) {
-                holder.tv_user_email.setText(model.getEmail());
-              //  holder.setRecyclerItemClick(this);
-                holder.tv_user_email.setOnClickListener(new View.OnClickListener() {
+                if(model.getEmail().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail())) {
+                    holder.tv_user_email.setText(model.getEmail()+" (me)");
+                }
+                else{
+                    holder.tv_user_email.setText(model.getEmail());
+                }
+
+                holder.main_layout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(OnlinePeopleActivity.this, "hello", Toast.LENGTH_SHORT).show();
@@ -175,7 +180,6 @@ public class OnlinePeopleActivity extends AppCompatActivity implements GoogleApi
                             startActivity(i);
                         }
                     }
-
                 });
             }
 

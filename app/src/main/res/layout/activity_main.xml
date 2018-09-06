@@ -4,37 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".MainActivity">
-<!--<EditText-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="50dp"-->
-    <!--android:layout_marginTop="50dp"-->
-    <!--android:layout_marginLeft="5dp"-->
-    <!--android:layout_marginRight="5dp"-->
-    <!--android:hint="enter name"-->
-    <!--android:paddingLeft="10dp"-->
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/img_logo"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/pointer"/>
 
-    <!--android:id="@+id/ed_name"/>-->
-    <!--<EditText-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:paddingLeft="10dp"-->
-        <!--android:layout_marginTop="5dp"-->
-        <!--android:hint="enter pass"-->
-        <!--android:layout_below="@+id/ed_name"-->
-        <!--android:id="@+id/ed_pass"/>-->
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="Login"
-        android:id="@+id/btn_login"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/img_logo"
         android:background="@color/colorAccent"
-       />
+        android:text="Login"
+        android:textColor="@android:color/white"/>
 
 
 </RelativeLayout>

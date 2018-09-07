@@ -37,9 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_login:
                 startActivityForResult(
                         AuthUI.getInstance().createSignInIntentBuilder()
-                                .setAvailableProviders(Collections.singletonList(new AuthUI.IdpConfig.EmailBuilder().setAllowNewAccounts(false).build()))
+                                .setAvailableProviders(Collections.singletonList(new AuthUI.IdpConfig.EmailBuilder().setAllowNewAccounts(true).build()))
                                 .build(),
                         PERMISSION);
+
                 break;
         }
     }

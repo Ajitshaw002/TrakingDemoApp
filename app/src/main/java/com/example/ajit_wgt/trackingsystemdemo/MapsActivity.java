@@ -80,12 +80,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     //clear all old marker
                     mMap.clear();
 
-                    //add friend marker on map
-//                    mMap.addMarker(new MarkerOptions()
-//                            .position(friendLatlng)
-//                            .title(tracking.getEmail())
-//                            //.snippet("Distance " + new DecimalFormat("#.#").format((currentUserLocation.distanceTo(friendLocation)) / 1000+" km"))
-//                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+                  //  add friend marker on map
+                    mMap.addMarker(new MarkerOptions()
+                            .position(friendLatlng)
+                            .title(tracking.getEmail())
+                            //.snippet("Distance " + new DecimalFormat("#.#").format((currentUserLocation.distanceTo(friendLocation)) / 1000+" km"))
+                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
                     //add friend circle on map
                     mMap.addCircle(new CircleOptions()
